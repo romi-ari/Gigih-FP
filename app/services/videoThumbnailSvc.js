@@ -10,7 +10,7 @@ module.exports = {
         } catch (error) {
             return {
                 response: 404,
-                msg: "Video thumbnail list not found",
+                msg: "Video thumbnail not found",
                 error: error.message,
             }
         }

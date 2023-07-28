@@ -4,7 +4,7 @@ module.exports = {
 
     findAll() {
         try {
-            return comment.find({})
+            return comment.find()
         } catch (error) {
             throw new Error("Data not found") 
         }

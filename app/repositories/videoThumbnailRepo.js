@@ -4,7 +4,7 @@ module.exports = {
 
     findAll() {
         try {
-            return videoThumbnail.find({})
+            return videoThumbnail.find()
         } catch (error) {
             throw new Error("Data not found") 
         }

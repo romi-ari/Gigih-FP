@@ -31,7 +31,7 @@ module.exports = {
                     error: data.error
                 })
             } else {
-                res.status(200).json({
+                res.status(201).json({
                     status: "Success",
                     data
                 })

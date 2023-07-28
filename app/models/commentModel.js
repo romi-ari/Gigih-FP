@@ -2,14 +2,19 @@ const mongoose = require('mongoose')
 const Schema = mongoose.Schema
 
 const commentSchema = new mongoose.Schema({
-    Username: {type: String},
-    Comment: {type: String},
-    timestamp: {type: String},
-    VideoID: {
+    username: {
+        type: String,
+        required: true
+    },
+    comment: {
+        type: String,
+        required: true
+    },
+    videoID: {
         type: Schema.Types.ObjectId,
-        ref: "VideoThumbnail"
+        ref: "videoThumbnail"
     }
-})
+},  {timestamps: true})
 
 const comment = mongoose.model('comment', commentSchema)
 

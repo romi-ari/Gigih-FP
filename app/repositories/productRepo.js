@@ -4,7 +4,7 @@ module.exports = {
 
     findAll() {
         try {
-            return product.find({})
+            return product.find()
         } catch (error) {
             throw new Error("Data not found") 
         }

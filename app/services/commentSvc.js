@@ -10,7 +10,7 @@ module.exports = {
         } catch (error) {
             return {
                 response: 404,
-                msg: "Comment list not found",
+                msg: "Comment not found",
                 error: error.message,
             }
         }
@@ -18,14 +18,13 @@ module.exports = {
 
     async createComment(req) {
         try {
-            const username = req.body.username
-            const postComment = req.body.postComment
+            const {username, comment, videoID} = req.body
 
-            const comment = await commentRepo.create({
-                username, postComment
+            const commentData = await commentRepo.create({
+                username, comment, videoID
             })
             
-            return { comment }
+            return { commentData }
         } catch (error) {
             return {
                 response: 404,

@@ -1,8 +1,10 @@
 const mongoose = require('mongoose')
 
 const videoThumbnailSchema = new mongoose.Schema({
-    VideoID: {type: Number},
-    UrlImageThumbnail: {type: String},
+    urlImageThumbnail: {
+        type: String,
+        required: true
+    },
 })
 
 const videoThumbnail = mongoose.model('videoThumbnail', videoThumbnailSchema)

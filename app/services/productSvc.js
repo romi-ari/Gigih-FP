@@ -10,7 +10,7 @@ module.exports = {
         } catch (error) {
             return {
                 response: 404,
-                msg: "Product list not found",
+                msg: "Product not found",
                 error: error.message,
             }
         }
