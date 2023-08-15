@@ -4,15 +4,18 @@ const Schema = mongoose.Schema
 const commentSchema = new mongoose.Schema({
     username: {
         type: String,
-        required: true
+        required: true,
+        maxLength: 40,
     },
     comment: {
         type: String,
-        required: true
+        required: true,
+        maxLenght: 150,
     },
-    videoID: {
+    videoId: {
         type: Schema.Types.ObjectId,
-        ref: "videoThumbnail"
+        ref: "videoThumbnail",
+        required: true,
     }
 },  {timestamps: true})
 

@@ -4,9 +4,9 @@ module.exports = {
 
     async commentList() {
         try {
-            const listComment = await commentRepo.findAll()
+            const commentData = await commentRepo.findAll()
             
-            return { listComment }
+            return { commentData }
         } catch (error) {
             return {
                 response: 404,
@@ -16,22 +16,39 @@ module.exports = {
         }
     },
 
+    async commentVideoListById(req) {
+        try {
+            const videoId = req.params.videoId
+            const comment = await commentRepo.findById(videoId)
+
+            return { comment }
+        } catch (error) {
+            return {
+                response: 404,
+                msg: "Comment video by id not found",
+                error: error.message,
+            }
+        }
+    },
+
     async createComment(req) {
         try {
-            const {username, comment, videoID} = req.body
+            const {username, comment, videoId} = req.body
 
             const commentData = await commentRepo.create({
-                username, comment, videoID
+                username: username,
+                comment: comment,
+                videoId: videoId
             })
             
             return { commentData }
         } catch (error) {
             return {
-                response: 404,
+                response: 400,
                 status: "Fail",
                 msg: "Failed to post comment",
                 error: error.message,
             }
         }
-    }
+    },
 }
