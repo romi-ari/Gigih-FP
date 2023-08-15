@@ -1,0 +1,1024 @@
+{
+	"info": {
+		"_postman_id": "b68fb3e9-2037-45e1-952a-1d6ec96aea77",
+		"name": "finalproject-gg3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23550520",
+		"_collection_link": "https://winter-satellite-139332.postman.co/workspace/My-Workspace~c71eb257-1229-4a95-8eb3-6f2711e62b80/collection/23550520-b68fb3e9-2037-45e1-952a-1d6ec96aea77?action=share&source=collection_link&creator=23550520"
+	},
+	"item": [
+		{
+			"name": "Product",
+			"item": [
+				{
+					"name": "Product list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/product-list/",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"product-list",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/product-list",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"product-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "431"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1af-FtFdsb2x0tNg1u/MjW132n/thHY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 12:22:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"product\": [\n            {\n                \"_id\": \"64da1c8f2df6e76ff7cb9a16\",\n                \"title\": \"title tes\",\n                \"price\": \"200000\",\n                \"urlImageThumbnailProduct\": \"https://images.tokopedia.net/img/cache/500-square/product-1/2021/2/20/5455107/5455107_c6a2f5b5-fcc8-415f-b63d-35e60b424736.jpg.webp?ect=4g\",\n                \"linkProduct\": \"https://www.tokopedia.com/nagoyaelectronic/kipas-angin-dinding-nagoya-wall-fan-baling-besi-18\",\n                \"videoId\": \"64d9d937c585cdaa8da35c29\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Product list by video id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/product-list/64da13b38257dbcba86f86d5",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"product-list",
+								"64da13b38257dbcba86f86d5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/product-list",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"product-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "431"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1af-FtFdsb2x0tNg1u/MjW132n/thHY\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 12:22:44 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"product\": [\n            {\n                \"_id\": \"64da1c8f2df6e76ff7cb9a16\",\n                \"title\": \"title tes\",\n                \"price\": \"200000\",\n                \"urlImageThumbnailProduct\": \"https://images.tokopedia.net/img/cache/500-square/product-1/2021/2/20/5455107/5455107_c6a2f5b5-fcc8-415f-b63d-35e60b424736.jpg.webp?ect=4g\",\n                \"linkProduct\": \"https://www.tokopedia.com/nagoyaelectronic/kipas-angin-dinding-nagoya-wall-fan-baling-besi-18\",\n                \"videoId\": \"64d9d937c585cdaa8da35c29\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Product create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n                \"title\": \"Infinix Hot 30 8/128 GB RAM 8 ROM 128 8GB 128GB\",\n                \"price\": \"119500\",\n                \"urlImageThumbnailProduct\": \"https://images.tokopedia.net/img/cache/200-square/VqbcmM/2023/7/22/d70c9744-e0f7-4ecf-974f-784b84a6ba0a.jpg\",\n                \"linkProduct\": \"https://www.tokopedia.com/36shop/infinix-note-30-nfc-8-256gb-garansi-resmi-1-tahun-black?extParam=ivf%3Dtrue&src=topads\",\n                \"videoId\": \"64da444b5417ec0ead56ca15\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/product",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"product"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"title tes\", \n    \"price\":\"200000\",\n    \"urlImageThumbnailProduct\":\"https://images.tokopedia.net/img/cache/500-square/product-1/2021/2/20/5455107/5455107_c6a2f5b5-fcc8-415f-b63d-35e60b424736.jpg.webp?ect=4g\",  \n    \"linkProduct\":\"https://www.tokopedia.com/nagoyaelectronic/kipas-angin-dinding-nagoya-wall-fan-baling-besi-18\",\n    \"videoId\":\"64d9d937c585cdaa8da35c29\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/product",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"product"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "429"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ad-6MQvAEYjnlyd7zvJlQwfSpTf/vc\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 12:22:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"product\": {\n            \"title\": \"title tes\",\n            \"price\": \"200000\",\n            \"urlImageThumbnailProduct\": \"https://images.tokopedia.net/img/cache/500-square/product-1/2021/2/20/5455107/5455107_c6a2f5b5-fcc8-415f-b63d-35e60b424736.jpg.webp?ect=4g\",\n            \"linkProduct\": \"https://www.tokopedia.com/nagoyaelectronic/kipas-angin-dinding-nagoya-wall-fan-baling-besi-18\",\n            \"videoId\": \"64d9d937c585cdaa8da35c29\",\n            \"_id\": \"64da1c8f2df6e76ff7cb9a16\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Product  update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Lenovo Gaming 3 Ryzen 7 5800H RTX3050 512GB SSD 8GB 100%sRGB W11+OHS\", \n    \"price\":\"1320000\",\n    \"urlImageThumbnailProduct\":\"Lenovo Gaming 3 Ryzen 7 5800H RTX3050 512GB SSD 8GB 100%sRGB W11+OHS\", \n    \"linkProduct\":\"https://www.tokopedia.com/lenovoauthorizedjakbar/lenovo-gaming-3-ryzen-7-5800h-rtx3050-512gb-ssd-8gb-100-srgb-w11-ohs?extParam=ivf%3Dfalse&src=topads\",\n    \"videoId\":\"64d9d937c585cdaa8da35c29\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/product/64dbacbb73e39bf14a4e4ebb",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"product",
+								"64dbacbb73e39bf14a4e4ebb"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\":\"Kipas angin\", \n    \"price\":\"230000\",\n    \"urlImageThumbnailProduct\":\"https://images.tokopedia.net/img/cache/500-square/product-1/2021/2/20/5455107/5455107_c6a2f5b5-fcc8-415f-b63d-35e60b424736.jpg.webp?ect=4g\", \n    \"linkProduct\":\"https://www.tokopedia.com/nagoyaelectronic/kipas-angin-dinding-nagoya-wall-fan-baling-besi-18\",\n    \"videoId\":\"64d9d937c585cdaa8da35c29\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/product/64da1c8f2df6e76ff7cb9a16",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"64da1c8f2df6e76ff7cb9a16"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-5NCpkjlssyFHZIPV/R2EvJ0a4Xo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 12:24:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"msg\": \"Update success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Product delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/product/64dbadc673e39bf14a4e4ebe",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"product",
+								"64dbadc673e39bf14a4e4ebe"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/product/64d9ef7f2d541e1af95129ef",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"product",
+										"64d9ef7f2d541e1af95129ef"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-PvD20/3Kzg99IpH10aw2WueNzGw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 10:55:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"msg\": \"Delete success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Video",
+			"item": [
+				{
+					"name": "Video list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/video-thumbnail-list",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"video-thumbnail-list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/video-thumbnail-list",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"video-thumbnail-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-UowQVxCx8/Uoath40VBUmvYvRig\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:45:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"video\": [\n            {\n                \"_id\": \"64da13b38257dbcba86f86d5\",\n                \"urlVideo\": \"https://www.youtube.com/watch?v=HjNVymiHLNo\",\n                \"urlImageThumbnail\": \"https://i.ytimg.com/vi/HjNVymiHLNo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDs1WCqrsJNG4LtnCNg_D0MWzMAdA\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Video by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/video-thumbnail/64da13b38257dbcba86f86d5",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"video-thumbnail",
+								"64da13b38257dbcba86f86d5"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/video-thumbnail-list",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"video-thumbnail-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "292"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"124-UowQVxCx8/Uoath40VBUmvYvRig\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:45:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"video\": [\n            {\n                \"_id\": \"64da13b38257dbcba86f86d5\",\n                \"urlVideo\": \"https://www.youtube.com/watch?v=HjNVymiHLNo\",\n                \"urlImageThumbnail\": \"https://i.ytimg.com/vi/HjNVymiHLNo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDs1WCqrsJNG4LtnCNg_D0MWzMAdA\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Video create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Puncak kecanggihan tablet Rp22.000.000!!!\",\n    \"urlVideo\":\"https://www.youtube.com/watch?v=q32mn4ls6Co\", \n    \"urlImageThumbnail\":\"https://i.ytimg.com/vi/q32mn4ls6Co/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwWlMGk2HZoGdjI5Qsy2F1ePWUOg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/video-thumbnail",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"video-thumbnail"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"urlVideo\":\"https://www.youtube.com/watch?v=HjNVymiHLNo\", \n    \"urlImageThumbnail\":\"https://i.ytimg.com/vi/HjNVymiHLNo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDs1WCqrsJNG4LtnCNg_D0MWzMAdA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/video-thumbnail",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"video-thumbnail"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "290"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"122-zizx7DL5ddsvEyfy6a2kNGLE9gw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:44:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"video\": {\n            \"urlVideo\": \"https://www.youtube.com/watch?v=HjNVymiHLNo\",\n            \"urlImageThumbnail\": \"https://i.ytimg.com/vi/HjNVymiHLNo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDs1WCqrsJNG4LtnCNg_D0MWzMAdA\",\n            \"_id\": \"64da13b38257dbcba86f86d5\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Video update",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\":\"Saya beli 20 TWS murah buat 2023, dan pilih yang paling RECOMMENDED!\",\n    \"urlVideo\":\"https://www.youtube.com/watch?v=xoMwssBOCMM\", \n    \"urlImageThumbnail\":\"https://i.ytimg.com/vi/xoMwssBOCMM/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCiFxeFYno4Qnp7Z1Ws6LJZZYWkrg\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/video-thumbnail/64da43715417ec0ead56ca10",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"video-thumbnail",
+								"64da43715417ec0ead56ca10"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"urlVideo\":\"https://www.youtube.com/watch?v=xoMwssBOCMM\", \n    \"urlImageThumbnail\":\"https://i.ytimg.com/vi/HjNVymiHLNo/hq720.jpg?sqp=-oaymwEcCOgCEMoBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDs1WCqrsJNG4LtnCNg_D0MWzMAdA\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/video-thumbnail/64d9d937c585cdaa8da35c29",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"video-thumbnail",
+										"64d9d937c585cdaa8da35c29"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-5NCpkjlssyFHZIPV/R2EvJ0a4Xo\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:44:08 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"msg\": \"Update success\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Video delete",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/video-thumbnail/64d9d937c585cdaa8da35c29",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"video-thumbnail",
+								"64d9d937c585cdaa8da35c29"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/video-thumbnail/64d9d937c585cdaa8da35c29",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"video-thumbnail",
+										"64d9d937c585cdaa8da35c29"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "38"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26-PvD20/3Kzg99IpH10aw2WueNzGw\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:44:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"msg\": \"Delete success\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Comment",
+			"item": [
+				{
+					"name": "Comment list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/comment-list",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"comment-list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "localhost:8000/comment-list",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"comment-list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "245"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f5-6f+DmCvVIJsd3FVTpcSWvR/QTp8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:50:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"OK\",\n    \"data\": {\n        \"commentData\": [\n            {\n                \"_id\": \"64da14c0e40519171b1336f2\",\n                \"username\": \"user1\",\n                \"comment\": \"ini comment tes\",\n                \"videoId\": \"64da13b38257dbcba86f86d5\",\n                \"createdAt\": \"2023-08-14T11:49:20.643Z\",\n                \"updatedAt\": \"2023-08-14T11:49:20.643Z\",\n                \"__v\": 0\n            }\n        ]\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Comment video by id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/comment-list/64da13b38257dbcba86f86d5",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"comment-list",
+								"64da13b38257dbcba86f86d5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Comment",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"user3\",\n    \"comment\":\"Barang bagus\",\n    \"videoId\": \"64da13b38257dbcba86f86d5\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://gigih-fp-api.vercel.app/comment",
+							"protocol": "https",
+							"host": [
+								"gigih-fp-api",
+								"vercel",
+								"app"
+							],
+							"path": [
+								"comment"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Output",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"user1\",\n    \"comment\":\"ini comment tes\",\n    \"videoId\": \"64da13b38257dbcba86f86d5\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8000/comment",
+									"host": [
+										"localhost"
+									],
+									"port": "8000",
+									"path": [
+										"comment"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "248"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f8-ChQkPaQeO7t3Tl9m8yhvrrSqbS8\""
+								},
+								{
+									"key": "Date",
+									"value": "Mon, 14 Aug 2023 11:49:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"data\": {\n        \"commentData\": {\n            \"username\": \"user1\",\n            \"comment\": \"ini comment tes\",\n            \"videoId\": \"64da13b38257dbcba86f86d5\",\n            \"_id\": \"64da14c0e40519171b1336f2\",\n            \"createdAt\": \"2023-08-14T11:49:20.643Z\",\n            \"updatedAt\": \"2023-08-14T11:49:20.643Z\",\n            \"__v\": 0\n        }\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
